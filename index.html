@@ -3,38 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Landing Page</title>
+  <title>DreamSpace Realty</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav id="navbar">
+    <div class="logo">DreamSpace</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header class="navbar">
-    <nav class="nav">
-      <a href="#" class="logo">BrandName</a>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section id="hero">
+    <h1>Find Your Dream Home</h1>
+    <p>Beautiful spaces. Affordable prices. Trusted by 10,000+ clients.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
 
-  <main class="main-content">
-    <section class="hero">
-      <h1>Welcome to Our Landing Page</h1>
-      <p>Clean. Simple. Responsive.</p>
-      <a href="#" class="cta-btn">Get Started</a>
-    </section>
-    <section class="section">
-      <h2>Features</h2>
-      <p>Put your key features here.</p>
-    </section>
-    <section class="section">
-      <h2>More Info</h2>
-      <p>More details about your service.</p>
-    </section>
-  </main>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="image2.png" alt="Buy Property" />
+        <h3>Buy Property</h3>
+        <p>Explore affordable and luxury properties across major cities.</p>
+      </div>
+      <div class="card">
+        <img src="image3.png" alt="Rent Homes" />
+        <h3>Rent Homes</h3>
+        <p>Flexible rental options for bachelors, families, and students.</p>
+      </div>
+      <div class="card">
+        <img src="image4.png" alt="Sell Property" />
+        <h3>Sell Property</h3>
+        <p>Get the best value for your property with our expert agents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DreamSpace Realty. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

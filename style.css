@@ -1,102 +1,169 @@
-/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  z-index: 999;
+body {
+  line-height: 1.6;
+  background-color: #002760;
+  color: #333;
 }
-.nav {
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
+  transition: background-color 0.4s ease;
+  z-index: 999;
 }
-.logo {
+
+nav.scrolled {
+  background-color: #2b2b2b;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 24px;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-.nav-links a {
-  color: #333;
-  padding: 8px 12px;
-  transition: color 0.3s, background 0.3s;
-}
-.nav-links a:hover {
   color: #fff;
-  background: #333;
-  border-radius: 4px;
 }
 
-/* Scrolled nav */
-.navbar.scrolled {
-  background-color: #f8f8f8;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+nav ul {
+  display: flex;
+  list-style: none;
 }
 
-/* Hero section */
-.hero {
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #f9b233;
+}
+
+
+
+#hero {
   height: 100vh;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  color: white;
+  background: url('image5.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.cta-btn {
-  padding: 12px 24px;
-  background-color: white;
-  color: #333;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: background 0.3s;
-}
-.cta-btn:hover {
-  background: #ddd;
+  padding: 0 2rem;
+  color: #fff; /* fixed the text color to be visible */
+  background-color: rgba(0, 0, 0, 0.4); /* in case image loads slowly */
 }
 
-/* Other sections */
-.section {
-  padding: 100px 40px;
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+#hero .btn {
+  background-color: #f9b233;
+  color: #000;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+#hero .btn:hover {
+  transform: scale(1.05);
+}
+
+
+#services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+#services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#contact {
+  background-color: #f1f1f1;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+#contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  background-color: #2b2b2b;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #2b2b2b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
